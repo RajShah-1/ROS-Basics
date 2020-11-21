@@ -1,3 +1,5 @@
+### Basic Publisher and Subscriber Node
+ 
 Create pkg_pub_sub
 ```
 cd ~/catkin_ws/src
@@ -23,8 +25,21 @@ Run ROS Master
 roscore
 ```
 
-Run the ROS Node hello_world
+Run the ROS Nodes
 ```
 rosrun pkg_pub_sub pub_node.py
 rosrun pkg_pub_sub sub_node.py
+```
+
+### Controlling a turtle!
+
+Launch turtlesim
+```
+rosrun turtlesim turtlesim_node
+```
+
+Comment talker() and uncomment turtleController() in pub_node.py <br />
+Run pub_node.py
+```
+rosrun pkg_pub_sub pub_node.py
 ```
