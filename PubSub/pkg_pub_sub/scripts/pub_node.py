@@ -7,7 +7,7 @@ from geometry_msgs.msg import Twist
 def talker():
   pub = rospy.Publisher('chatter', String, queue_size=10)
   rospy.init_node('talker', anonymous=True)
-  rate = rospy.Rate(2)  # 10hz
+  rate = rospy.Rate(2)
   index = 0
   while not rospy.is_shutdown():
     hello_str = "hello world " + str(index)
@@ -24,7 +24,7 @@ def turtleController():
       queue_size=10,
   )
   rospy.init_node('talker', anonymous=True)
-  rate = rospy.Rate(2)  # 10hz
+  rate = rospy.Rate(2)
   velocity_msg = Twist()
   velocity_msg.angular.z = 2
   velocity_msg.linear.x = 2
